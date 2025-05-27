@@ -1,0 +1,208 @@
+/* Report Filters */
+.report-filters {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.report-filters .form-select,
+.report-filters .form-control {
+    padding: 8px 12px;
+}
+
+.report-filters .btn {
+    padding: 8px 20px;
+}
+
+/* Custom Date Range */
+#customDateRange {
+    background-color: var(--bg-color);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+#customDateRange .form-control {
+    margin-bottom: 10px;
+}
+
+/* Report Content */
+.report-content {
+    margin-top: 20px;
+}
+
+.report-section {
+    margin-bottom: 30px;
+}
+
+/* Charts */
+.canvas-container {
+    height: 400px;
+    position: relative;
+}
+
+.chart-container {
+    width: 100%;
+    height: 100%;
+}
+
+/* Report Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px;
+}
+
+.card-header h5 {
+    margin: 0;
+    color: var(--text-color);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Report Statistics */
+.report-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.stat-card h6 {
+    color: var(--text-muted);
+    margin-bottom: 5px;
+}
+
+.stat-card h3 {
+    margin: 0;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+/* Status Badges */
+.badge {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.badge.bg-success {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.badge.bg-warning {
+    background-color: var(--warning-color);
+    color: white;
+}
+
+.badge.bg-danger {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.badge.bg-info {
+    background-color: var(--info-color);
+    color: white;
+}
+
+.badge.bg-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Tables */
+.table {
+    margin-bottom: 0;
+}
+
+.table th {
+    background-color: var(--bg-color);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .report-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .report-filters .col-md-3 {
+        width: 100%;
+    }
+
+    .report-filters .btn {
+        width: 100%;
+    }
+
+    #customDateRange {
+        flex-direction: column;
+    }
+
+    #customDateRange .col-md-6 {
+        width: 100%;
+    }
+
+    .report-content {
+        padding: 10px;
+    }
+
+    .card {
+        margin-bottom: 15px;
+    }
+
+    .stat-card {
+        padding: 15px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .sidebar,
+    .header,
+    .report-filters {
+        display: none !important;
+    }
+
+    .report-content {
+        margin: 0 !important;
+    }
+
+    .card {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .card-header {
+        border-bottom: none !important;
+    }
+
+    .stat-card {
+        background-color: white !important;
+    }
+}

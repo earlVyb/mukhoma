@@ -1,0 +1,162 @@
+/* SMS Controls */
+.sms-controls {
+    margin-bottom: 20px;
+}
+
+.sms-controls .form-check {
+    margin-right: 15px;
+}
+
+/* Selected Tenants */
+#selectedTenants {
+    margin-top: 15px;
+}
+
+.tenant-item {
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.tenant-item:last-child {
+    border-bottom: none;
+}
+
+/* SMS Templates */
+.sms-templates {
+    margin-bottom: 20px;
+}
+
+.sms-templates .btn-outline-primary {
+    padding: 8px 15px;
+    margin-bottom: 10px;
+}
+
+/* SMS Form */
+.sms-form {
+    margin-bottom: 20px;
+}
+
+.sms-form .form-control {
+    height: 150px;
+    resize: vertical;
+}
+
+.sms-form .char-counter {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* SMS History */
+.sms-history {
+    margin-top: 20px;
+}
+
+.sms-history-filters {
+    margin-bottom: 15px;
+}
+
+.sms-history-filters .form-select,
+.sms-history-filters .form-control {
+    width: auto;
+}
+
+/* SMS Status Badges */
+.badge {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.badge.bg-success {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.badge.bg-danger {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.badge.bg-warning {
+    background-color: var(--warning-color);
+    color: white;
+}
+
+.badge.bg-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* SMS Details Modal */
+.recipients-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.recipient-item {
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.recipient-item:last-child {
+    border-bottom: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sms-controls .form-check {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .sms-templates .btn-outline-primary {
+        margin-bottom: 5px;
+    }
+
+    .sms-history-filters {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sms-history-filters .form-select,
+    .sms-history-filters .form-control {
+        width: 100%;
+    }
+
+    .recipients-list {
+        max-height: 200px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .sidebar,
+    .header,
+    .sms-controls,
+    .sms-templates {
+        display: none !important;
+    }
+
+    .sms-history {
+        margin-top: 0 !important;
+    }
+
+    .card {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .card-header {
+        border-bottom: none !important;
+    }
+
+    .table {
+        width: 100%;
+    }
+
+    .table th,
+    .table td {
+        white-space: nowrap;
+    }
+}

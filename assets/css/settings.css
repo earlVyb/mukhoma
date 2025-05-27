@@ -1,0 +1,182 @@
+/* Settings Page */
+.settings-page {
+    padding: 20px;
+}
+
+/* Settings Cards */
+.settings-card {
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.settings-card .card-header {
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px;
+}
+
+.settings-card .card-header h5 {
+    margin: 0;
+    color: var(--text-color);
+}
+
+.settings-card .card-body {
+    padding: 20px;
+}
+
+/* Form Controls */
+.settings-form .form-control,
+.settings-form .form-select {
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.settings-form .form-label {
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+/* Save Buttons */
+.settings-card .btn-primary {
+    padding: 8px 20px;
+    border-radius: 6px;
+}
+
+/* Status Badges */
+.badge {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.badge.bg-success {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.badge.bg-warning {
+    background-color: var(--warning-color);
+    color: white;
+}
+
+.badge.bg-danger {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.badge.bg-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* User Management Table */
+.users-table {
+    margin-top: 20px;
+}
+
+.users-table th {
+    background-color: var(--bg-color);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.users-table td {
+    vertical-align: middle;
+}
+
+.users-table .btn {
+    padding: 4px 8px;
+}
+
+/* Modals */
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.modal-header {
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header h5 {
+    margin: 0;
+    color: var(--text-color);
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-footer {
+    border-top: 1px solid var(--border-color);
+    padding: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .settings-card {
+        margin-bottom: 15px;
+    }
+
+    .settings-card .card-header {
+        padding: 12px;
+    }
+
+    .settings-card .card-body {
+        padding: 15px;
+    }
+
+    .settings-form .form-control,
+    .settings-form .form-select {
+        padding: 6px 10px;
+    }
+
+    .users-table {
+        margin-top: 15px;
+    }
+
+    .users-table th,
+    .users-table td {
+        padding: 8px;
+    }
+
+    .users-table .btn {
+        padding: 3px 6px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .sidebar,
+    .header,
+    .settings-card .card-header {
+        display: none !important;
+    }
+
+    .settings-card {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .settings-card .card-body {
+        padding: 10px !important;
+    }
+
+    .users-table {
+        width: 100%;
+    }
+
+    .users-table th,
+    .users-table td {
+        white-space: nowrap;
+    }
+
+    .users-table .btn {
+        display: none;
+    }
+}

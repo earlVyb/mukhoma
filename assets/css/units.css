@@ -1,0 +1,187 @@
+/* Units Grid Styles */
+.units-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.unit-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.unit-card:hover {
+    transform: translateY(-5px);
+}
+
+.unit-card.occupied {
+    border-left: 4px solid var(--success-color);
+}
+
+.unit-card.vacant {
+    border-left: 4px solid var(--warning-color);
+}
+
+.unit-card.maintenance {
+    border-left: 4px solid var(--danger-color);
+}
+
+.unit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.unit-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.status-badge {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.status-badge.occupied {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.status-badge.vacant {
+    background-color: var(--warning-color);
+    color: white;
+}
+
+.status-badge.maintenance {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.unit-details {
+    margin-bottom: 15px;
+}
+
+.unit-details p {
+    margin: 5px 0;
+}
+
+.unit-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.unit-actions button {
+    padding: 5px 10px;
+}
+
+/* Units List Styles */
+.units-list {
+    padding: 20px;
+}
+
+.units-list .badge {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.units-list .badge.occupied {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.units-list .badge.vacant {
+    background-color: var(--warning-color);
+    color: white;
+}
+
+.units-list .badge.maintenance {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+/* Search and Filters */
+.search-filters {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+}
+
+.search-container {
+    flex: 1;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+}
+
+.filters .form-select {
+    min-width: 200px;
+}
+
+/* Units Controls */
+.units-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+}
+
+.view-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Unit Form Modal */
+#unitModal .modal-dialog {
+    max-width: 800px;
+}
+
+#unitModal .form-control {
+    margin-bottom: 15px;
+}
+
+#unitModal .form-select {
+    margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .units-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .search-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .units-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

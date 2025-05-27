@@ -1,0 +1,196 @@
+/* Tenant Table Styles */
+.tenants-table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.tenants-table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.tenants-table th {
+    background-color: var(--bg-color);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.tenants-table td {
+    vertical-align: middle;
+}
+
+/* Tenant Status Badges */
+.badge {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.badge.bg-success {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.badge.bg-danger {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.badge.bg-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Tenant Controls */
+.tenants-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+}
+
+/* Search and Filters */
+.search-filters {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+}
+
+.search-container {
+    flex: 1;
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+}
+
+.filters .form-select {
+    min-width: 200px;
+}
+
+/* Tenant Form Modal */
+#tenantModal .modal-dialog {
+    max-width: 900px;
+}
+
+#tenantModal .modal-content {
+    border-radius: 10px;
+}
+
+#tenantModal .form-control,
+#tenantModal .form-select {
+    margin-bottom: 15px;
+}
+
+#tenantModal .row {
+    margin-bottom: 15px;
+}
+
+/* Tenant Checkbox Column */
+.tenant-checkbox {
+    margin: 0;
+}
+
+/* Bulk Actions */
+.bulk-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.bulk-actions button {
+    padding: 5px 15px;
+}
+
+/* Tenant Status Indicators */
+.status-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.status-indicator.active {
+    background-color: var(--success-color);
+}
+
+.status-indicator.inactive {
+    background-color: var(--secondary-color);
+}
+
+/* Tenant Arrears */
+.arrears-badge {
+    font-weight: bold;
+}
+
+.arrears-badge.bg-danger {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tenants-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filters {
+        flex-direction: column;
+    }
+
+    .tenants-table {
+        font-size: 0.9rem;
+    }
+
+    #tenantModal .modal-dialog {
+        max-width: 100%;
+        margin: 10px;
+    }
+
+    #tenantModal .form-control,
+    #tenantModal .form-select {
+        width: 100%;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .sidebar,
+    .header,
+    .tenants-controls,
+    .search-filters,
+    .modal {
+        display: none !important;
+    }
+
+    .tenants-table {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .tenants-table th,
+    .tenants-table td {
+        white-space: nowrap;
+    }
+}
